@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Thank You for Your Purchase!</h1>
+    </header>
+    <section id="checkout-section">
+        <p>Your order has been successfully placed. Order ID: <span id="order-id"></span></p>
+        <h2>Your Order Summary</h2>
+        <div id="checkout-items"></div>
+        <p>Total: ₹<span id="total-amount"></span></p>
+        <button onclick="proceedToPayment()">Proceed to Payment</button>
+    </section>
+
+    <!-- Including confirmation.js -->
+    <script src="confirmation.js"></script>
+</body>
+</html>
+  <!-- Add this in confirmation.html -->
+<script>
+    function proceedToPayment() {
+        // Show a loading message or spinner
+        const checkoutSection = document.getElementById("checkout-section");
+        checkoutSection.innerHTML = "<p>Processing payment, please wait...</p>";
+
+        // Simulate payment processing with a delay
+        setTimeout(() => {
+            alert("Payment successful! Redirecting to order confirmation...");
+            // Clear the cart data after "payment" is successful
+            localStorage.removeItem("cart");
+            localStorage.removeItem("totalPrice");
+
+            // Redirect to the confirmation page
+            window.location.href = `thank_you.html?orderId=${orderId}`;
+        }, 2000); // 2-second delay
+    }
+</script>

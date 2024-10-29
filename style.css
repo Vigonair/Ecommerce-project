@@ -23,7 +23,7 @@
 }
 
 .nav-links a {
-    color: white;
+    color: rgb(255, 251, 251);
     text-decoration: none;
     font-size: 1.1em;
 }
@@ -89,7 +89,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: rgb(214, 169, 237);
     position: relative;
 }
 
@@ -100,7 +100,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Overlay to darken the background image */
+    background: rgba(29, 28, 29, 0.5); /* Overlay to darken the background image */
     z-index: 1;
 }
 
@@ -347,4 +347,264 @@
     .social-icons {
         justify-content: center;
     }
+}
+
+/* Style for the checkout button */
+#checkout {
+    background-color: #FF6347; /* Warm tomato color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#checkout:hover {
+    background-color: #FF4500; /* Darker warm color on hover */
+}
+
+#checkout:active {
+    background-color: #E63946; /* Even darker color when clicked */
+}
+.modal {
+    display: block; /* Show modal by default */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(176, 205, 219, 0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #555; /* Subtle grey for label text */
+}
+.modal-content input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+.modal-content input:focus {
+    border-color: #007bff; /* Blue border on focus */
+}
+.modal-content {
+    background-color: rgb(151, 186, 233);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#product-page {
+    margin-top: 20px;
+}
+#login-btn {
+    background-color: #28a745; /* Bootstrap green */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Login Button Hover Effect */
+#login-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+    box-shadow: 0px 0px 15px rgba(79, 123, 152, 0.4); /* Slight green glow */
+}
+
+/* Center stars below the product */
+.product .stars {
+    text-align: center; /* Align stars in the center */
+    margin-top: 10px; /* Add some space above the stars */
+}
+
+/* Style each star */
+.product .stars .star {
+    font-size: 24px; /* Size of the stars */
+    cursor: pointer; /* Show pointer on hover */
+    color: #ddd; /* Default color for stars */
+}
+
+.product .stars .star.active {
+    color: gold; /* Color of the active stars */
+}
+
+/* Optional: Add some spacing between stars */
+.product .stars .star {
+    margin: 0 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Styling for the search bar container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Styling for the search bar input */
+#searchBar {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #d55353;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Focus effect on the search bar */
+#searchBar:focus {
+    border-color: #599ee8;
+    box-shadow: 0 0 5px rgba(106, 130, 238, 0.356);
+}
+
+/* Optional: Add a placeholder style */
+#searchBar::placeholder {
+    color: #232426;
+    font-style: italic;
+}
+/* Order Confirmation Page Styles */
+#checkout-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Matches your existing box-shadow for consistency */
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Header Styling */
+header h1 {
+    color: #725e5e; /* Matching the navbar color */
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+/* Order Summary and Details */
+#checkout-section h2 {
+    color: #555;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+#checkout-section p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+#order-id, #total-amount {
+    font-weight: bold;
+    color: #000;
+}
+
+/* Checkout Items Styling */
+#checkout-items {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    margin: 15px 0;
+}
+
+/* Button Styling */
+button {
+    background-color: #FF6347; /* Tomato color to match checkout button */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF4500; /* Darker tomato color on hover */
+}
+
+button:active {
+    background-color: #E63946; /* Even darker color when clicked */
+}
+/* Add this to your style.css file or within <style> tags in confirmation.html */
+
+/* Styling for the receipt confirmation message */
+.receipt-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f5f5f5;
+    border: 2px solid #4CAF50; /* Green border for success */
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-in-out; /* Add fade-in effect */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.receipt-message h2 {
+    color: #4CAF50; /* Green for success heading */
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.receipt-message p {
+    color: #333; /* Darker text color */
+    font-size: 1em;
+    margin-top: 10px;
+}
+.checkout-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.item-details {
+    display: flex;
+    align-items: center;
+}
+
+.product-image-small {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
